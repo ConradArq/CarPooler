@@ -94,7 +94,7 @@
                 console.log("Geolocation not supported");
             }
         }
-        console.log(trip);
+        
         //trip object is set to a value if we use the input fields to enter a depPoint&destination
         if (trip == undefined) {
             getUserLocation();

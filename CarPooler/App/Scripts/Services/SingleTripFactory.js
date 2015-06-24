@@ -3,13 +3,13 @@
     var o = {};
     var _trip;
 
-    o.getRoute = function (origin,destination) {
+    o.getWeather = function (city) {
         var q = $q.defer();
         $http({
-            url: 'http://maps.googleapis.com/maps/api/directions/json?origin=' + origin + '&destination=' + destination,
+            url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+city+'&mode=json&units=metric&cnt=7',
             method: 'GET'
         }).success(function (data) {
-            console.log(data);
+            q.resolve(data);
         }).error(function (data) {
             alert(data);
         })

@@ -1,11 +1,12 @@
 ﻿<div ng-controller="AllTripsController">
     <div id="addTrip"class="well row" style="margin-top: 5%;">
-        <input class="form-control" placeholder="Enter destination" ng-model="trip.destination"/>
-        <input class="form-control" placeholder="Enter departure point" ng-model="trip.departurePoint" />
-        <input class="form-control" placeholder="Enter date" ng-model="trip.date" />
-        <input class="form-control" placeholder="Enter time of departure (Not Required)" ng-model="trip.etd" />
-        <input class="form-control" placeholder="Enter time of arrival (Not Required)" ng-model="trip.eta" />
-        <input class="form-control" placeholder="Enter Seats Available" ng-model="trip.seatsAvailable" />
+        <input class="form-control" placeholder="Enter destination" ng-model="trip.destination" ng-click="inputFieldClicked=false" />
+        <input class="form-control" placeholder="Enter departure point" ng-model="trip.departurePoint" ng-click="inputFieldClicked=false" />
+        <input class="form-control" placeholder="Enter date" value={{inputDate}} ng-click="inputFieldClicked=true" />
+        <div ng-show ="inputFieldClicked"><datepicker ng-model="date1" show-weeks="showWeeks" starting-day="1" ng-click="inputDate=(date1 | date:'fullDate')"></datepicker></div>
+        <input class="form-control" placeholder="Enter time of departure (Not Required)" ng-model="trip.etd" ng-click="inputFieldClicked=false" />
+        <input class="form-control" placeholder="Enter time of arrival (Not Required)" ng-model="trip.eta" ng-click="inputFieldClicked=false" />
+        <input class="form-control" placeholder="Enter Seats Available" ng-model="trip.seatsAvailable" ng-click="inputFieldClicked=false" />
 
         <br/>
         <button class="btn btn-warning" ng-click="addTrips()">Add Journey</button>

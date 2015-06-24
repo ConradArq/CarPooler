@@ -47,11 +47,13 @@
             </footer>
         </div>
     </div>
-    <script src="http://maps.googleapis.com/maps/api/js"></script> <!--why here and not in the view?-->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular")
-    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/app")   
     @RenderSection("scripts", required: false)
+    <script src="http://angular-ui.github.com/bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
+    @*<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">*@
 </body>
 </html>

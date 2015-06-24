@@ -245,7 +245,6 @@
     <Content Include="App\Scripts\Controllers\UserTripsController.js" />
     <Content Include="App\Scripts\Controllers\NavBarController.js" />
     <Content Include="App\Scripts\Controllers\AllTripsController.js" />
-    <Content Include="App\Scripts\Directives\directives.js" />
     <Content Include="App\Scripts\Services\AddUserProfileFactory.js" />
     <Content Include="App\Scripts\Services\IndexFactory.js" />
     <Content Include="App\Scripts\Services\LoginFactory.js" />

@@ -1,5 +1,9 @@
 ﻿app.controller('AllTripsController', ['$scope', 'AllTripsFactory', '$routeParams', function ($scope, AllTripsFactory, $routeParams) {
 
+    $scope.date1 = new Date();
+
+    $scope.showWeeks = true;
+
     $scope.datepickerOptions = {
         format: 'yyyy-mm-dd',
         language: 'fr',
@@ -24,6 +28,7 @@
     }
 
     $scope.addTrips = function () {
+        $scope.trip.date = $scope.date1;
         AllTripsFactory.addTrips($scope.trip);
     }
 
