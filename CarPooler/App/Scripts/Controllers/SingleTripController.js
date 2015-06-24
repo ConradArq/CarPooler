@@ -59,14 +59,13 @@
             
             var weatherForecast = "";
             for (var day in data.list) {
-                weatherForecast += daysOfTheWeek[day] + '<img src="http://openweathermap.org/img/w/' + data.list[day].weather[0].icon + '.png"/>   <span style="font-size:15px">High <span class="label label-warning">' + Math.round(data.list[day].temp.max) + '</span></span>   <span style="font-size:15px">Low <span class="label label-default">' + Math.round(data.list[day].temp.min) + '</span></span></br>'
+                weatherForecast += daysOfTheWeek[day] + '<img src="http://openweathermap.org/img/w/' + data.list[day].weather[0].icon + '.png"/>   <span style="font-size:15px;text-align:center">High <span class="label label-warning">' + Math.round(data.list[day].temp.max) + '</span></span>    <span style="font-size:15px;text-align:center">Low <span class="label label-default">' + Math.round(data.list[day].temp.min) + '</span></span></br>'
             }
-            
             var marker1 = new google.maps.Marker({
                 map: map,
                 title: "Weather Forecast",
                 content: weatherForecast,
-                position: new google.maps.LatLng(data.city.coord.lat, data.city.coord.lon),
+                position: new google.maps.LatLng(data.city.coord.lat+0.5, data.city.coord.lon),
                 icon: "http://openweathermap.org/img/w/"+data.list[0].weather[0].icon+".png"
             });
             google.maps.event.addListener(marker1, 'click', function () {

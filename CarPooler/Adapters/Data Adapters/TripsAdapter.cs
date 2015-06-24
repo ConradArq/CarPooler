@@ -204,6 +204,7 @@ namespace CarPooler.Adapters.Data_Adapters
                 db.DriverJourneys.AddOrUpdate(x=>x.Id,new DriverJourney(){
                 Id=trip.Id,
                 UserId=db.Users.FirstOrDefault(x=>x.UserName==trip.Username).Id,
+                DestinationCounterId=db.DriverJourneys.FirstOrDefault(x=>x.Destination==trip.Destination).DestinationCounterId,
                 Destination=trip.Destination,
                 DestLatitud=trip.DestLatitud,
                 DestLongitud=trip.DestLongitud,

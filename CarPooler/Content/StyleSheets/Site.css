@@ -169,3 +169,7 @@ font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
     
 }
 
+.gm-style-iw>div {
+  width: 300px !important;
+  text-align:center;
+}

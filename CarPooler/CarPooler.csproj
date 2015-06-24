@@ -1125,8 +1125,6 @@
     <Folder Include="App\Scripts\Directives\templates\" />
     <Folder Include="App\Scripts\Filters\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SingleTrip\" />
-    <Folder Include="Views\UserProfileApi\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
